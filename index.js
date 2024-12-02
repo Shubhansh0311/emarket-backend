@@ -20,7 +20,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions)); // Enable CORS with options
 app.use(express.json()); // Use the built-in express.json() to parse JSON requests
-app.use("/", router); // Register your routes
+app.use("/api/getproducts", router); // Register your routes
 app.get("/api/getproducts/:id",(req,res)=>{
   res.json({message:'route working'})
 })
