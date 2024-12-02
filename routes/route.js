@@ -6,10 +6,10 @@ const router=express.Router()
 
 
 
-router.get("/api/getproducts",getProducts)
-router.post("/api/addproducts",addProduct)
-router.get("/api/getProducts/:id",getProductById)
-router.post("/api/signup",signup)
-router.post("/api/login",login)
+router.get("/getproducts",getProducts)
+router.post("/addproducts",addProduct)
+router.get("/getProducts/:id",getProductById)
+router.post("/signup",signup)
+router.post("/login",login)
 // router.post("/api/cart",cart)
 export default router

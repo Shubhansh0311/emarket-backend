@@ -66,7 +66,7 @@ const signup = async (req, res) => {
     // Validate password against the regex
     if (!passwordRegex.test(password)) {
         return res.status(400).send({
-            message: 'Password is not strong enough. ',
+            message: 'Password is not strong enough. '
         });
     }
 
