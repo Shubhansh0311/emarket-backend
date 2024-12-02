@@ -21,12 +21,7 @@ const corsOptions = {
 app.use(cors(corsOptions)); // Enable CORS with options
 app.use(express.json()); // Use the built-in express.json() to parse JSON requests
 app.use("/", router); // Register your routes
-app.get("/api/getproducts",(req,res)=>{
-  res.json({message:'route working 1'})
-})
-app.get("/api",(req,res)=>{ 
-  res.json({message:'route working 2'})
-})
+
 // Port from environment or default to 800
 const port = process.env.PORT || 800;
 
