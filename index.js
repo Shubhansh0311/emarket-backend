@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 const port=process.env.PORT||800
 // app.use(cors())
 app.use(cors({
+    // origin: 'http://localhost:3000'  // Replace with the actual URL of your frontend
     origin: 'https://emarket-frontend.vercel.app/'  // Replace with the actual URL of your frontend
   }));
 app.use("/",router)
