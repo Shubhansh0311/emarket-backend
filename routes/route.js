@@ -6,7 +6,7 @@ const router=express.Router()
 
 
 
-router.get("/api/getProducts",getProducts)
+router.get("/api/getproducts",getProducts)
 router.post("/api/addproducts",addProduct)
 router.get("/api/getProducts/:id",getProductById)
 router.post("/api/signup",signup)
