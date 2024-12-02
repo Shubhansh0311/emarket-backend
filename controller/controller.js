@@ -66,7 +66,7 @@ const signup = async (req, res) => {
     // Validate password against the regex
     if (!passwordRegex.test(password)) {
         return res.status(400).send({
-            message: 'Password is not strong enough. It must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long.',
+            message: 'Password is not strong enough. ',
         });
     }
 
