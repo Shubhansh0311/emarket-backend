@@ -22,8 +22,8 @@ app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/",router)
-app.listen(port,()=>{
-    console.log("Server is listening at http://localhost:",port);
+// app.listen(port,()=>{
+//     console.log("Server is listening at http://localhost:",port);
     
-})
+// })
 
