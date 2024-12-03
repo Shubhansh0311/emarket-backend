@@ -15,4 +15,5 @@ const connectDB=()=>{
         
     })
 }
+connectDB()
 export default connectDB
