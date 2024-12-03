@@ -25,10 +25,15 @@ app.use("/api", router);  // Register routes
 // Handle preflight requests (OPTIONS method)
 app.options('*', cors(corsOptions));
 
+app.get("/test/home",(req,res)=>{
+res.json({message:"successfull"})
+})
+
+
 // Start the server
-const port = process.env.PORT || 800;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// const port = process.env.PORT || 800;
+// app.listen(port, () => {
+//   console.log(`Server is running on port ${port}`);
+// });
 
 export default app;
