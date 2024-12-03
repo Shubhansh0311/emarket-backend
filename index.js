@@ -12,7 +12,7 @@ connectDB();
 
 // CORS options
 const corsOptions = {
-  origin: 'https://emarket-frontend.vercel.app',  // Your frontend URL
+  origin: 'https://emarket-frontend.vercel.app/',  // Your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
   credentials: true,  // Allow cookies or authentication headers
