@@ -21,10 +21,10 @@ const corsOptions = {
 app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));  // Enable CORS with specific options
 app.use(express.json());  // Built-in express.json() to parse JSON requests
-// app.use("/api", router);  // Register routes
-app.get('/api',(req,res)=>{
-  res.send("hi im from index page")
-})
+app.use("/api", router);  // Register routes
+// app.get('/api',(req,res)=>{
+//   res.send("hi im from index page")
+// })
 
 // Handle preflight requests (OPTIONS method)
 
