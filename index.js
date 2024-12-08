@@ -12,7 +12,7 @@ connectDB();
 
 // CORS options
 const corsOptions = {
-  origin: '*',  // Your frontend URL
+  origin: 'https://emarket-frontend.vercel.app',  // Your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
   credentials: true,  // Allow cookies or authentication headers
@@ -41,9 +41,9 @@ app.use("/api", router);  // Register routes
 
 
 // Start the server
-// const port = process.env.PORT || 800;
-// app.listen(port, () => {
-//   console.log(`Server is running on port ${port}`);
-// });
+const port = process.env.PORT || 800;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 export default app;
