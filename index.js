@@ -18,12 +18,12 @@ const corsOptions = {
   credentials: true,  // Allow cookies or authentication headers
 };
 
+app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));  // Enable CORS with specific options
 app.use(express.json());  // Built-in express.json() to parse JSON requests
 app.use("/api", router);  // Register routes
 
 // Handle preflight requests (OPTIONS method)
-app.options('*', cors(corsOptions));
 
 app.get("/test/home",(req,res)=>{
 res.json({message:"successfull"})
