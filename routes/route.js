@@ -11,7 +11,18 @@ router.get("/home",(req,res)=>{
     res.send("hi im working fine")
 })
 
-router.get('/getproducts',getProducts)
+// router.get('/getproducts',getProducts)
+router.get('/getproducts',(req, res) => {
+
+    try {
+        const response = await Product.find();
+        if (response) {
+            res.json({ data: response, message: "successful" }).status(200)
+        }
+    } catch (err) {
+        res.json({ message: "product not found" }).status(500)
+    }}
+)
 router.post("/addproducts",addProduct)
 router.get("/getProducts/:id",getProductById)
 router.post("/signup",signup)
