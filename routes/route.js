@@ -12,7 +12,7 @@ router.get("/home",(req,res)=>{
 })
 
 // router.get('/getproducts',getProducts)
-router.get('/getproducts',(req, res) => {
+router.get('/getproducts',async(req, res) => {
 
     try {
         const response = await Product.find();
