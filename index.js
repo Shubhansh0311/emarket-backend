@@ -25,9 +25,9 @@ app.use("/api", router);  // Register routes
 
 // Handle preflight requests (OPTIONS method)
 
-app.get("/test/home",(req,res)=>{
-res.json({message:"successfull"})
-})
+// app.get("/test/home",(req,res)=>{
+// res.json({message:"successfull"})
+// })
 
 
 // Start the server
