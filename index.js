@@ -12,7 +12,7 @@ connectDB();
 
 // CORS options
 const corsOptions = {
-  origin: 'https://emarket-frontend.vercel.app',  // Your frontend URL
+  origin: '*',  // Your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
   credentials: true,  // Allow cookies or authentication headers
@@ -26,7 +26,7 @@ const corsOptions = {
 
 // app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));  // Enable CORS with specific options
-// app.use(cors())
+// app.use(cors())``
 app.use(express.json());  // Built-in express.json() to parse JSON requests
 app.use("/api", router);  // Register routes
 // app.get('/api',(req,res)=>{
