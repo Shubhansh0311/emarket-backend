@@ -21,7 +21,7 @@ const corsOptions = {
 app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));  // Enable CORS with specific options
 app.use(express.json());  // Built-in express.json() to parse JSON requests
-app.use("/api", router);  // Register routes
+app.use("/", router);  // Register routes
 
 // Handle preflight requests (OPTIONS method)
 
