@@ -4,11 +4,14 @@ import getProducts, { addProduct, getProductById, login, signup } from "../contr
 const router=express.Router()
 
 
+// router.get("/home",(req,res)=>{
+//     res.json("route working ")
+// })
 router.get("/home",(req,res)=>{
-    res.json("route working ")
+    res.send("hi im working fine")
 })
 
-router.get("/getproducts",getProducts)
+router.get('/getproducts',getProducts)
 router.post("/addproducts",addProduct)
 router.get("/getProducts/:id",getProductById)
 router.post("/signup",signup)
