@@ -1,5 +1,6 @@
 import express from "express"
 import getProducts, { addProduct, getProductById, login, signup } from "../controller/controller.js"
+import { Product } from "../modals/Products.js"
 
 const router=express.Router()
 
@@ -12,12 +13,12 @@ router.get("/home",(req,res)=>{
 })
 
 // router.get('/getproducts',getProducts)
-router.get('/getproducts',async(req, res) => {
+router.get('/getproducts',async(req,res) => {
 
     try {
         const response = await Product.find();
         if (response) {
-            res.json({ data: response, message: "successful" }).status(200)
+            res.json({ data: response, message: "successful",status:'fulfill' }).status(200)
         }
     } catch (err) {
         res.json({ message: "product not found" }).status(500)
