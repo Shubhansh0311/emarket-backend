@@ -4,7 +4,7 @@ import cors from 'cors';
 import connectDB from './db.js'; // MongoDB connection
 import router from './routes/route.js'; // Routes for your API
 
-dotenv.config();
+// dotenv.config();
 const app = express();
 
 // Connect to the database
