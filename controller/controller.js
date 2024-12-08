@@ -6,10 +6,10 @@ import bcrypt from "bcrypt"
 const getProducts = async (req, res) => {
 
     try {
-        const response = await Product.find();
-        if (response) {
+        // const response = await Product.find();
+        // if (response) {
             res.json({ data: response, message: "successful" }).status(200)
-        }
+        // }
     } catch (err) {
         res.json({ message: "product not found" }).status(500)
     }
