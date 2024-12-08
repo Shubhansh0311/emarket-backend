@@ -4,7 +4,7 @@ import cors from 'cors';
 import connectDB from './db.js'; // MongoDB connection
 import router from './routes/route.js'; // Routes for your API
 
-// dotenv.config();
+dotenv.config();
 const app = express();
 
 // Connect to the database
@@ -27,6 +27,9 @@ const corsOptions = {
 // app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));  // Enable CORS with specific options
 // app.use(cors())``
+
+
+
 app.use(express.json());  // Built-in express.json() to parse JSON requests
 app.use("/api", router);  // Register routes
 // app.get('/api',(req,res)=>{
